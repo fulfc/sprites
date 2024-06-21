@@ -1,4 +1,4 @@
-scene.setBackgroundImage(img`
+scene.set_background_image(img("""
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
         ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
         ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
@@ -139,11 +139,11 @@ scene.setBackgroundImage(img`
         ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
         ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
         ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-`)
-let mySprite = sprites.create(assets.image`
+"""))
+mySprite = sprites.create(assets.image("""
     Rocket Ship
-`, SpriteKind.Player)
-let projectile = sprites.createProjectileFromSide(img`
+"""), SpriteKind.player)
+projectile = sprites.create_projectile_from_side(img("""
         ..................................................
             ..................................................
             ..................................................
@@ -194,5 +194,8 @@ let projectile = sprites.createProjectileFromSide(img`
             ..................................................
             ..................................................
             ..................................................
-    `, 50, 50)
-music.play(music.stringPlayable("A - E - A - G E ", 160), music.PlaybackMode.UntilDone)
+    """),
+    50,
+    50)
+music.play(music.string_playable("A - E - A - G E ", 160),
+    music.PlaybackMode.UNTIL_DONE)
